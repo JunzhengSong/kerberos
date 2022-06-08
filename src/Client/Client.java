@@ -148,16 +148,7 @@ public class Client {
 
     public static DataStruct.Packet clientToAS(String clientID, String TGSID){
         DataStruct.Packet p= new DataStruct.Packet();
-        /*
-        private Head head;      //头部  全是二进制01
-        private String sessionKey;    //0
-        private String clientID;
-        private String requestID;  //被请求方的ID
-        private String timeStamp;  //时间戳
-        private String lifeTime;    //ticket有效期
-        private Ticket Ticket;    //被请求方的票据
-        private Authenticator Auth; //请求方的确认信息
-        * */
+
         DataStruct.Head h= new DataStruct.Head(ASID,clientID,"0","0","1","1","1","0","0","0", Head.zero(128),Head.zero(16));
 
         p.setHead(h);
@@ -173,15 +164,7 @@ public class Client {
     }
 
     public static DataStruct.Packet clientToTGS(String clientID, String serverID,DataStruct.Ticket ticketTGS, DataStruct.Authenticator authTGS){
-        /*
-        private Head head;      //头部  全是二进制01
-        private String sessionKey;    //二进制
-        private String clientID;        //发送请求的ID
-        private String requestID;  //被请求方的ID
-        private String timeStamp;  //时间戳
-        private String lifeTime;    //ticket有效期
-        private Ticket Ticket;    //被请求方的票据
-        private Authenticator Auth; //请求方的确认信息*/
+
         /***发给tgs的没有sk，tgs从ticket中获取**********/
         DataStruct.Packet p= new DataStruct.Packet();
         // authTGS就是用 CT_SK加密过的name（id），ip，timestamp

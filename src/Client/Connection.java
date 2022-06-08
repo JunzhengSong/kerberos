@@ -289,33 +289,3 @@ public class Connection {
 * 首先进行了与server的测试，普通的socket通讯可以正常实现
 * 出现unhandled exception错误 使用 try catch （ctrl+alt+t）
 * */
-
-  /*  Packet{
-        head=Head{
-            destID='0001',
-            sourceID='1111',
-            existLogin='0',
-            existSessionKey='0',
-            existID='1',
-            existRequstID='1',
-            existTS='1',
-            existLifeTime='0',
-            existTicket='0',
-            existAuthenticator='0' },
-        sessionKey='',
-        clientID='1111',
-        requestID='0010',
-        imeStamp='',
-        lifeTime='',
-        Ticket=Ticket{
-            sessionKey='',
-            ID='',
-            IP='',
-            requestID='',
-            timeStamp='',
-            lifeTime=''},
-        Auth=Authenticator{
-            clientID='',
-            clientIP='',
-            timeStamp=''}
-    }*/

@@ -170,22 +170,22 @@ public class MainWindow extends JFrame {
                     *
                     * */
                     packetFromAS =connectToAS(userID);
-                    messageOnScreen.append("\n成功连接到AS");
-                    messageOnScreen.append("\n发送给AS的包（未加密）"+messageSendUnencrypted);
-                    messageOnScreen.append("\n从AS获取的包（未解密）"+messageReceiveEncrypted);
-                    messageOnScreen.append("\n从AS获取的包（解密后）"+messageReceiveDecrypted);
+                    messageOnScreen.append("\n\nclient成功连接到AS");
+                    messageOnScreen.append("\n\nclient发送给AS的包（未加密）"+messageSendUnencrypted);
+                    messageOnScreen.append("\n\nclient从AS获取的包（未解密）"+messageReceiveEncrypted);
+                    messageOnScreen.append("\n\nclient从AS获取的包（解密后）"+messageReceiveDecrypted);
                     System.out.println("在ui里 packetFromAS为"+packetFromAS.toString());
                     packetFromTGS =connectToTGS(packetFromAS);
-                    messageOnScreen.append("\n成功连接到TGS");
-                    messageOnScreen.append("\n发送给TGS的包（未加密）"+messageSendUnencrypted);
-                    messageOnScreen.append("\n发送给TGS的包（加密后）"+messageSendEncrypted);
-                    messageOnScreen.append("\n从TGS获取的包（未解密）"+messageReceiveEncrypted);
-                    messageOnScreen.append("\n从TGS获取的包（解密后）"+messageReceiveDecrypted);
+                    messageOnScreen.append("\n\nclient成功连接到TGS");
+                    messageOnScreen.append("\n\nclient发送给TGS的包（未加密）"+messageSendUnencrypted);
+                    messageOnScreen.append("\n\nclient发送给TGS的包（加密后）"+messageSendEncrypted);
+                    messageOnScreen.append("\n\nclient从TGS获取的包（未解密）"+messageReceiveEncrypted);
+                    messageOnScreen.append("\n\nclient从TGS获取的包（解密后）"+messageReceiveDecrypted);
                     System.out.println("在ui里，packetFromTGS为"+packetFromTGS.toString());
                     packetFromServer = connectToServer(packetFromTGS,packetFromAS);
-                    messageOnScreen.append("\n成功连接到Server");
-                    messageOnScreen.append("\n发送给Server的包（未加密）"+messageSendUnencrypted);
-                    messageOnScreen.append("\n发送给Server的包（加密后）"+messageSendEncrypted);
+                    messageOnScreen.append("\n\nclient成功连接到Server");
+                    messageOnScreen.append("\n\nclient发送给Server的包（未加密）"+messageSendUnencrypted);
+                    messageOnScreen.append("\n\nclient发送给Server的包（加密后）"+messageSendEncrypted);
 
                     try {
                         LIBRARY library = new LIBRARY();
@@ -201,50 +201,7 @@ public class MainWindow extends JFrame {
 
                     /**********************************************************************************/
                 }
-                //这里的逻辑应该如何组织
-                //登录的逻辑  Kerberos的整体流程是做登录的 使用用户名连接AS
-                //注册的逻辑
-//                if(connectToAS(username2.getText(),packetFromAS, messageSendUnencrypted,messageSendEncrypted,messageReceiveEncrypted,messageReceiveDecrypted)){
-//
-//                    messageOnScreen.append("\n成功连接到AS");
-//                    messageOnScreen.append("\n未加密的发送包"+messageSendUnencrypted);
-//                    messageOnScreen.append("\n加密的发送包"+messageSendEncrypted);
-//                    messageOnScreen.append("\n未解密的接收包"+messageReceiveEncrypted);
-//                    messageOnScreen.append("\n解密后的接收包"+messageReceiveDecrypted);
-//                    if(connectToTGS(packetFromAS, packetFromTGS,messageSendUnencrypted,messageSendEncrypted,messageReceiveEncrypted,messageReceiveDecrypted)){
-//                        messageOnScreen.append("\n成功连接到TGS");
-//                        messageOnScreen.append("\n未加密的发送包"+messageSendUnencrypted);
-//                        messageOnScreen.append("\n加密的发送包"+messageSendEncrypted);
-//                        messageOnScreen.append("\n未解密的接收包"+messageReceiveEncrypted);
-//                        messageOnScreen.append("\n解密后的接收包"+messageReceiveDecrypted);
-//                        if(connectToServer(packetFromTGS,messageSendUnencrypted,messageSendEncrypted,messageReceiveDecrypted)){
-//                            messageOnScreen.append("\n成功连接到Server");
-//                            messageOnScreen.append("\n未加密的发送包"+messageSendUnencrypted);
-//                            messageOnScreen.append("\n加密的发送包"+messageSendEncrypted);
-//                            if(messageReceiveDecrypted=="1"){
-//                                messageOnScreen.append("\nserver认证成功！");
-//                                LIBRARY library = new LIBRARY();
-//                                library.setVisible(true);
-//                                //跳转到服务界面
-//                            }
-//                            else if(messageReceiveDecrypted=="0"){
-//                                messageOnScreen.append("\nserver认证失败！");
-//                            }
-//                            else {
-//                                messageOnScreen.append("\nserver认证出错！");
-//                            }
-//                        }
-//                        else{
-//                            messageOnScreen.append("\n连接Server失败！");
-//                        }
-//                    }
-//                    else{
-//                        messageOnScreen.append("\n连接TGS失败！");
-//                    }
-//                }
-//                else {
-//                    messageOnScreen.append("\n连接AS失败！");
-//                }
+
 
 
             }
